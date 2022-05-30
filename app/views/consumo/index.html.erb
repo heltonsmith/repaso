@@ -1,0 +1,18 @@
+
+
+<br><br>
+<h1>API AVES</h1>
+<% @pager.each do |x| %>
+
+    <strong>UUID:</strong> <%= x["uid"] %> <br>
+    <strong>Nombre:</strong>  <%= x["name"]["spanish"] %> <br>
+    <strong>URL Img:</strong>  <%= x["images"]["main"] %> <br>
+    <%= image_tag x["images"]["main"] %>
+    <br>
+    <hr>
+
+<% end %>
+
+
+<br>
+<%= paginate @pager %>
